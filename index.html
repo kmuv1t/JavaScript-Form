@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Pineapple Hospital</title>
+		<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1 class="title">Pineapple Hospital</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>All Pacients</h2>
+				
+				<label for="filtrar-tabela">Filter:</label>
+				<input type="text" name="filtro" id="filtrar-tabela"
+				placeholder="Pacient Name"></input>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Weight(kg)</th>
+							<th>Height(m)</th>
+							<th>Body Fat(%)</th>
+							<th>BMI</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="paciente" id="paciente-1">
+							<td class="info-nome">Carlos</td>
+							<td class="info-peso">75</td>
+							<td class="info-altura">1.85</td>
+							<td class="info-gordura">10</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="paciente" id="paciente-2">
+							<td class="info-nome">João</td>
+							<td class="info-peso">80</td>
+							<td class="info-altura">1.72</td>
+							<td class="info-gordura">40</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="paciente" id="paciente-3">
+							<td class="info-nome">Erica</td>
+							<td class="info-peso">54</td>
+							<td class="info-altura">1.64</td>
+							<td class="info-gordura">14</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="paciente" id="paciente-4">
+							<td class="info-nome">Douglas</td>
+							<td class="info-peso">85</td>
+							<td class="info-altura">1.73</td>
+							<td class="info-gordura">24</td>
+							<td class="info-imc">0</td>
+						</tr>
+						<tr class="paciente" id="paciente-5">
+							<td class="info-nome">Tatiana</td>
+							<td class="info-peso">46</td>
+							<td class="info-altura">1.55</td>
+							<td class="info-gordura">19</td>
+							<td class="info-imc">0</td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="ajax-error" class="hideUser">Import was unsuccessful.</span>
+				<button id="buscar-pacientes" 
+				class="botao bto-principal">Import</button>
+			</section>
+		</main>
+		<!-- ... -->
+	<section class="container">
+		<h2 id="titulo-form">Add new pacient</h2>
+		<form id="form-add">
+			<div class="grupo">
+				<label for="nome">Name:</label>
+				<input id="nome" name="nome" type="text" placeholder="Pacient name" class="campo">
+			</div>
+			<div class="grupo">
+				<label for="peso">Weight:</label>
+				<input id="peso" name="peso" type="text" placeholder="Pacient Weight" class="campo campo-medio">
+			</div>
+			<div class="grupo">
+				<label for="altura">Height:</label>
+				<input id="altura" name="altura" type="text" placeholder="Pacient Height" class="campo campo-medio">
+			</div>
+			<div class="grupo">
+				<label for="gordura">% of Body Fat:</label>
+				<input id="gordura" type="text" placeholder="Pacient Body Fat %" class="campo campo-medio">
+			</div>
+			<p><span id="msg-erro" style="color: red;"></span></p>
+			<button id="adicionar-paciente" class="botao bto-principal">Add</button>
+		</form>
+	</section>
+	<script src="./js/main.js"></script>
+	<script src="./js/form.js"></script>
+	<script src="./js/remove.js"></script>
+	<script src="./js/filter.js"></script>
+	<script src="./js/search.js"></script>
+	</body>
+</html>
